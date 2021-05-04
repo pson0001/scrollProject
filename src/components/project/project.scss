@@ -1,0 +1,65 @@
+@import './../../styles/variables.scss';
+
+.projects {
+  min-width: 100vw;
+  height: 100vh;
+  background: $background;
+  z-index: 1;
+  color: $font;
+  padding-right: 200px;
+
+  display: flex;
+  align-items: center;
+  // margin-left: 600px;
+  flex-direction: row;
+  .projectContainer {
+    margin-left: 200px;
+    display: flex;
+
+    flex-direction: row;
+    .number {
+      > span {
+        font-size: 16rem;
+        font-weight: 800;
+        color: transparent;
+        -webkit-text-stroke: 1.5px rgba($color: #e7d8cb, $alpha: 1);
+      }
+    }
+    .project {
+      font-size: 1.5rem;
+      font-weight: 600;
+      max-width: 700px;
+      .projecImg {
+        cursor: pointer;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        background-position: center;
+        background-size: cover;
+        -webkit-transition: all 0.5s;
+        -moz-transition: all 0.5s;
+        -o-transition: all 0.5s;
+        transition: all 0.5s;
+
+        .image {
+          margin-left: -40px;
+          width: 600px;
+          height: 350px;
+          border-radius: 4px;
+        }
+      }
+      .projectDescription {
+        display: flex;
+        flex-direction: column;
+        margin-left: -40px;
+        max-width: 700px;
+
+        span {
+          font-size: 1.1rem;
+          font-weight: 400;
+          white-space: normal;
+        }
+      }
+    }
+  }
+}

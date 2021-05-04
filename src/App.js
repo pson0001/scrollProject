@@ -1,25 +1,40 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useRef, useEffect } from 'react'
+import locomotiveScroll from 'locomotive-scroll'
+import Project from './components/project/Project'
+import Introduction from './components/introduction/Introduction'
+import gsap from 'gsap'
+import Navigation from './components/navigation/Navigation'
+import './App.scss'
+import './styles/base.scss'
+import About from './components/about/About'
 
 function App() {
+  gsap.to('body', 0, { css: { visibility: 'visible' } })
+
+  const scrollRef = useRef(null)
+
+  useEffect(() => {
+    if (scrollRef) {
+      new locomotiveScroll({
+        el: scrollRef.current,
+        smooth: true,
+        direction: 'horizontal',
+      })
+    }
+  })
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Navigation />
+      <div className="scroll" ref={scrollRef} data-scroll-container>
+        <div className="contentContainer">
+          <Introduction />
+          <Project />
+          <About />
+        </div>
+      </div>
     </div>
-  );
+  )
 }
 
-export default App;
+export default App

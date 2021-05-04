@@ -1,0 +1,24 @@
+@import './../../styles/variables.scss';
+.navigationContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.homeLink {
+  position: absolute;
+  width: 32px;
+  height: 32px;
+  margin: 60px;
+  border: 2px solid $font;
+  border-radius: 40px;
+
+  & span {
+    color: $font;
+    margin-left: 11px;
+    line-height: 32px;
+    font-size: 18px;
+
+    font-weight: 600;
+  }
+  z-index: 2;
+}

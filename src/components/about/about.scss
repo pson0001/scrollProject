@@ -1,0 +1,23 @@
+@import './../../styles/variables.scss';
+.aboutContainer {
+  width: 100vw;
+  color: $font;
+  background-color: #d0bcaa;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  .about {
+    display: flex;
+    flex-direction: column;
+    width: 50vw;
+    white-space: normal;
+  }
+  .title {
+    margin-bottom: 40px;
+  }
+  .description {
+    font-size: 1.1rem;
+    margin-bottom: 40px;
+  }
+}
