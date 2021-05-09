@@ -1,6 +1,6 @@
 import React from 'react'
 import './project.scss'
-import { ArrowRight } from '../../assets/Icon.js'
+// import { ArrowRight } from '../../assets/Icon.js'
 import peerView from '../../assets/peerview.png'
 const Project = () => {
   return (

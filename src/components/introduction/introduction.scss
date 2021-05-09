@@ -9,8 +9,45 @@
   flex-direction: column;
   justify-content: center;
   color: $font;
+  transition: all 0.3s ease;
+}
+.uxuiColor {
+  transition: all 0.3s ease;
+  background: $blue;
+
+  .reverse {
+    color: $blue;
+    transition: all 0.3s ease;
+    -webkit-text-stroke: 3px rgba($color: $white, $alpha: 0.8);
+  }
+  .intro {
+    color: $white;
+    transition: all 0.3s ease;
+  }
+  .subTitle {
+    color: $white;
+    transition: all 0.3s ease;
+  }
+}
+#motionGlass {
+  position: absolute;
+  top: 150px;
+  right: 400px;
+  offset-path: path(
+    'M15.0615 0.0546875V0.0546875C11.6175 39.2729 40.6183 73.8574 79.8365 77.3014L401.598 105.557C452.057 109.988 489.37 154.486 484.939 204.945V204.945'
+  );
+  animation: move 3s ease-in-out alternate infinite;
+  offset-rotate: 0deg;
 }
 
+@keyframes move {
+  0% {
+    offset-distance: 0%;
+  }
+  100% {
+    offset-distance: 100%;
+  }
+}
 h1 {
   margin: 0;
 }
@@ -21,12 +58,14 @@ h1 {
   flex-direction: column;
   align-items: flex-start;
   z-index: 1;
+  transition: all 0.3s ease;
 }
 .subTitle {
   color: $font;
   font-size: 1.5rem;
   margin-bottom: 20px;
   font-weight: 600;
+  transition: all 0.3s ease;
 }
 .title {
   display: flex;
@@ -46,6 +85,7 @@ h1 {
     position: absolute;
     top: 0;
     right: 0;
+    cursor: pointer;
     span {
       margin-top: 4px;
     }
@@ -83,8 +123,9 @@ h1 {
 .reverse {
   font-weight: 900;
   color: $background;
-  -webkit-text-stroke: 2px rgba($color: $font, $alpha: 0.8);
+  -webkit-text-stroke: 3px rgba($color: $font, $alpha: 0.8);
   text-shadow: 8px 8px 0 $font;
+  transition: all 0.3s ease;
 }
 
 .bubble {

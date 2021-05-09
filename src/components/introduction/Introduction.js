@@ -1,9 +1,26 @@
-import React from 'react'
+import React, { useState, useContext, useEffect } from 'react'
 import './introduction.scss'
-
+import { CurrentTheme } from './../ThemeWrapper'
+import { Glass } from './../../assets/Icon'
 const Introduction = () => {
+  const [ifHover, setIfHover] = useState(false)
+
+  const { currentTheme, setCurrentTheme } = useContext(CurrentTheme)
+
+  useEffect(() => {
+    if (ifHover) {
+      setCurrentTheme('uxui')
+    } else {
+      setCurrentTheme('default')
+    }
+  }, [ifHover])
+
   return (
-    <div className="introContainer">
+    <div
+      className={
+        currentTheme === 'uxui' ? 'uxuiColor introContainer' : 'introContainer'
+      }
+    >
       <div className="intro">
         <div data-scroll data-scroll-speed="0" className="subTitle">
           <span>Hi, I'm Ping Song,</span>
@@ -13,8 +30,18 @@ const Introduction = () => {
         </div>
         <div className="title" data-scroll data-scroll-speed="0">
           <div className="designContainer">
+            {currentTheme === 'uxui' ? (
+              <div id="motionGlass">
+                <Glass />
+              </div>
+            ) : null}
+
             <h1 className="design reverse">Design,</h1>
-            <div className="bubble uxui">
+            <div
+              className="bubble uxui"
+              onMouseEnter={() => setIfHover(true)}
+              onMouseLeave={() => setIfHover(false)}
+            >
               <span>UX/UI</span>
             </div>
           </div>
