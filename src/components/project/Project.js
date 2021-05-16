@@ -1,10 +1,22 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import './project.scss'
+import { CurrentTheme } from './../ThemeWrapper'
+
 // import { ArrowRight } from '../../assets/Icon.js'
 import peerView from '../../assets/peerview.png'
+
 const Project = () => {
+  const { currentTheme, setCurrentTheme } = useContext(CurrentTheme)
   return (
-    <div className="projects">
+    <div
+      className={
+        currentTheme === 'uxui'
+          ? 'uxui projects'
+          : currentTheme === 'frontend'
+          ? 'frontend projects'
+          : 'projects'
+      }
+    >
       <div className="projectContainer">
         <h1>Selected Projects</h1>
         <div className="number">

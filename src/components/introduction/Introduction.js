@@ -1,24 +1,31 @@
 import React, { useState, useContext, useEffect } from 'react'
 import './introduction.scss'
 import { CurrentTheme } from './../ThemeWrapper'
-import { Glass } from './../../assets/Icon'
+import { Glass, CodeAnime } from './../../assets/Icon'
 const Introduction = () => {
-  const [ifHover, setIfHover] = useState(false)
+  const [ifHoverUxui, setIfHoverUxui] = useState(false)
+  const [ifHoverFrontend, setIfHoverFrontend] = useState(false)
 
   const { currentTheme, setCurrentTheme } = useContext(CurrentTheme)
 
   useEffect(() => {
-    if (ifHover) {
+    if (ifHoverUxui) {
       setCurrentTheme('uxui')
+    } else if (ifHoverFrontend) {
+      setCurrentTheme('frontend')
     } else {
       setCurrentTheme('default')
     }
-  }, [ifHover])
+  }, [ifHoverUxui, ifHoverFrontend])
 
   return (
     <div
       className={
-        currentTheme === 'uxui' ? 'uxuiColor introContainer' : 'introContainer'
+        currentTheme === 'uxui'
+          ? 'uxuiColor introContainer'
+          : currentTheme === 'frontend'
+          ? 'frontendColor introContainer'
+          : 'introContainer'
       }
     >
       <div className="intro">
@@ -39,15 +46,25 @@ const Introduction = () => {
             <h1 className="design reverse">Design,</h1>
             <div
               className="bubble uxui"
-              onMouseEnter={() => setIfHover(true)}
-              onMouseLeave={() => setIfHover(false)}
+              onMouseEnter={() => setIfHoverUxui(true)}
+              onMouseLeave={() => setIfHoverUxui(false)}
             >
               <span>UX/UI</span>
             </div>
           </div>
           <div className="programmingContainer">
+            {currentTheme === 'frontend' ? (
+              <div id="motionCode">
+                <CodeAnime />
+              </div>
+            ) : null}
+
             <h1 className="program reverse">Programming,</h1>
-            <div className="bubble frontend">
+            <div
+              className="bubble frontend"
+              onMouseEnter={() => setIfHoverFrontend(true)}
+              onMouseLeave={() => setIfHoverFrontend(false)}
+            >
               <span>Front</span> <span>-end</span>
             </div>
             <div className="description">

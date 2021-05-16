@@ -10,7 +10,7 @@
 
   display: flex;
   align-items: center;
-  // margin-left: 600px;
+  transition: all 0.3s ease;
   flex-direction: row;
   .projectContainer {
     margin-left: 200px;
@@ -61,5 +61,15 @@
         }
       }
     }
+  }
+  &.frontend {
+    background: $yellow;
+    transition: all 0.3s ease;
+    color: white;
+  }
+  &.uxui {
+    background: $blue;
+    transition: all 0.3s ease;
+    color: white;
   }
 }

@@ -85,7 +85,7 @@ export const Glass = () => {
           height="142"
           rx="71"
           stroke="white"
-          stroke-width="10"
+          strokeWidth="10"
         />
         <rect
           width="73.5885"
@@ -103,9 +103,9 @@ export const Glass = () => {
           width="190.275"
           height="190.27"
           filterUnits="userSpaceOnUse"
-          color-interpolation-filters="sRGB"
+          colorInterpolationFilters="sRGB"
         >
-          <feFlood flood-opacity="0" result="BackgroundImageFix" />
+          <feFlood floodOpacity="0" result="BackgroundImageFix" />
           <feColorMatrix
             in="SourceAlpha"
             type="matrix"
@@ -132,3 +132,122 @@ export const Glass = () => {
     </svg>
   )
 }
+export const CodeAnime = () => (
+  <svg
+    width="400px"
+    height="165px"
+    viewBox="0 0 400 165"
+    version="1.1"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <g id="coding" stroke="none" strokeWidth="1" fill="none" fillRule="evenodd">
+      <g id="Artboard">
+        <g id="group1" transform="translate(10.000000, 10.000000)">
+          <g id="line1">
+            <rect
+              id="dash-1"
+              fill="#34354F"
+              x="0"
+              y="0"
+              width="40"
+              height="20"
+              rx="10"
+            ></rect>
+            <rect
+              id="dash-2"
+              fill="#fff"
+              x="45"
+              y="0"
+              width="60"
+              height="20"
+              rx="10"
+            ></rect>
+            <rect
+              id="dash-3"
+              fill="#fff"
+              x="111"
+              y="0"
+              width="100"
+              height="20"
+              rx="10"
+            ></rect>
+            <rect
+              id="dash-4"
+              fill="#fff"
+              x="216"
+              y="0"
+              width="70"
+              height="20"
+              rx="10"
+            ></rect>
+          </g>
+          <g id="line2" transform="translate(30.000000, 27.000000)">
+            <rect
+              id="dash-1"
+              fill="#34354F"
+              x="0"
+              y="0"
+              width="40"
+              height="20"
+              rx="10"
+            ></rect>
+            <rect
+              id="dash-2"
+              fill="#fff"
+              x="45"
+              y="0"
+              width="60"
+              height="20"
+              rx="10"
+            ></rect>
+            <rect
+              id="dash-3"
+              fill="#fff"
+              x="111"
+              y="0"
+              width="80"
+              height="20"
+              rx="10"
+            ></rect>
+          </g>
+          <rect
+            id="line6"
+            fill="#34354F"
+            x="0"
+            y="135"
+            width="40"
+            height="20"
+            rx="10"
+          ></rect>
+          <rect
+            id="line3"
+            fill="#fff"
+            x="60"
+            y="54"
+            width="290"
+            height="20"
+            rx="10"
+          ></rect>
+          <rect
+            id="line4"
+            fill="#34354F"
+            x="60"
+            y="81"
+            width="225"
+            height="20"
+            rx="10"
+          ></rect>
+          <rect
+            id="line5"
+            fill="#fff"
+            x="30"
+            y="108"
+            width="40"
+            height="20"
+            rx="10"
+          ></rect>
+        </g>
+      </g>
+    </g>
+  </svg>
+)

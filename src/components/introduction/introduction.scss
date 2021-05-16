@@ -3,18 +3,33 @@
 .introContainer {
   z-index: 1;
   background: $background;
-  // min-width: 100vw;
+
   height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   color: $font;
   transition: all 0.3s ease;
+  padding-right: 50px;
+  position: relative;
+  &::after {
+    content: '';
+    position: absolute;
+    right: -10px;
+    background-color: $background;
+    height: 100vh;
+    width: 40px;
+    z-index: 9;
+    transition: all 0.3s ease;
+  }
 }
 .uxuiColor {
   transition: all 0.3s ease;
   background: $blue;
-
+  &::after {
+    background-color: $blue;
+    transition: all 0.3s ease;
+  }
   .reverse {
     color: $blue;
     transition: all 0.3s ease;
@@ -27,6 +42,32 @@
   .subTitle {
     color: $white;
     transition: all 0.3s ease;
+  }
+  .bubble {
+    border: solid 2px $white;
+  }
+}
+.frontendColor {
+  background: $yellow;
+  &::after {
+    background-color: $yellow;
+    transition: all 0.3s ease;
+  }
+  .reverse {
+    color: $yellow;
+    transition: all 0.3s ease;
+    -webkit-text-stroke: 3px rgba($color: $white, $alpha: 0.8);
+  }
+  .intro {
+    color: $white;
+    transition: all 0.3s ease;
+  }
+  .subTitle {
+    color: $white;
+    transition: all 0.3s ease;
+  }
+  .bubble {
+    border: solid 2px $white;
   }
 }
 #motionGlass {
@@ -48,6 +89,67 @@
     offset-distance: 100%;
   }
 }
+
+#motionCode {
+  position: absolute;
+  top: -200px;
+  right: 500px;
+}
+rect {
+  opacity: 0;
+  animation: expand 0.2s forwards;
+}
+#line1 #dash-2 {
+  animation-delay: 0.1s;
+}
+
+#line1 #dash-3 {
+  animation-delay: 0.2s;
+}
+
+#line1 #dash-4 {
+  animation-delay: 0.3s;
+}
+
+#line2 #dash-1 {
+  animation-delay: 0.4s;
+}
+
+#line2 #dash-2 {
+  animation-delay: 0.5s;
+}
+
+#line2 #dash-3 {
+  animation-delay: 0.6s;
+}
+
+#line3 {
+  animation-delay: 0.7s;
+}
+
+#line4 {
+  animation-delay: 0.8s;
+}
+
+#line5 {
+  animation-delay: 0.9s;
+}
+
+#line6 {
+  animation-delay: 1s;
+}
+
+@keyframes expand {
+  0% {
+    opacity: 1;
+    width: 0;
+  }
+  100% {
+    opacity: 1;
+    width: 1;
+  }
+}
+
 h1 {
   margin: 0;
 }
@@ -104,6 +206,7 @@ h1 {
     position: absolute;
     top: -3rem;
     right: 12rem;
+    cursor: pointer;
   }
   .description {
     font-size: 1.1rem;
