@@ -1,6 +1,7 @@
 import React, { useContext } from 'react'
 import './project.scss'
 import { CurrentTheme } from './../ThemeWrapper'
+import { Link } from 'react-router-dom'
 
 // import { ArrowRight } from '../../assets/Icon.js'
 import peerView from '../../assets/peerview.png'
@@ -23,9 +24,11 @@ const Project = () => {
           <span>01</span>
         </div>
         <div className="project">
-          <div className="projecImg">
-            <img src={peerView} alt="peerView" className="image" />
-          </div>
+          <Link to={`/project/peerview`}>
+            <div className="projecImg">
+              <img src={peerView} alt="peerView" className="image" />
+            </div>
+          </Link>
           <div className="projectDescription">
             <p>PeerView</p>
             <span className="detail">
