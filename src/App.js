@@ -7,13 +7,17 @@ import './App.scss'
 import './styles/base.scss'
 import ThemeWrapper from './components/ThemeWrapper'
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
-import { CurrentTheme } from './components/ThemeWrapper'
+// import { CurrentTheme } from './components/ThemeWrapper'
+import { AnimatePresence } from 'framer-motion'
 import Home from './pages/Home'
 import Peerview from './pages/Peerview'
 
 function App() {
   gsap.to('body', 0, { css: { visibility: 'visible' } })
-
+  const imageDetails = {
+    width: 600,
+    height: 350,
+  }
   return (
     <div>
       <ThemeWrapper>
@@ -21,10 +25,20 @@ function App() {
         <Router>
           <Route
             render={({ location }) => (
-              <Switch location={location} key={location.pathname}>
-                <Route exact path="/" render={() => <Home />} />
-                <Route exact path="/project/:id" render={() => <Peerview />} />
-              </Switch>
+              <AnimatePresence exitBeforeEnter>
+                <Switch location={location} key={location.pathname}>
+                  <Route
+                    exact
+                    path="/"
+                    render={() => <Home imageDetails={imageDetails} />}
+                  />
+                  <Route
+                    exact
+                    path="/project/:id"
+                    render={() => <Peerview imageDetails={imageDetails} />}
+                  />
+                </Switch>
+              </AnimatePresence>
             )}
           />
         </Router>

@@ -34,18 +34,23 @@
         display: flex;
         flex-direction: row;
         align-items: center;
-        background-position: center;
-        background-size: cover;
+        // background-position: center;
+
         -webkit-transition: all 0.5s;
         -moz-transition: all 0.5s;
         -o-transition: all 0.5s;
         transition: all 0.5s;
-
-        .image {
-          margin-left: -40px;
+        // position: relative;
+        .projecBox {
+          overflow: hidden;
+          position: relative;
           width: 600px;
           height: 350px;
+          margin-left: -40px;
           border-radius: 4px;
+          img {
+            width: 100%;
+          }
         }
       }
       .projectDescription {

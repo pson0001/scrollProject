@@ -1,0 +1,12 @@
+.singleProjecImg {
+  height: 50vh;
+  position: relative;
+  .singleProjecBox {
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    img {
+      width: 100%;
+    }
+  }
+}
