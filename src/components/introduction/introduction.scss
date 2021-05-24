@@ -17,6 +17,9 @@
     position: absolute;
     right: -10px;
     background-color: $background;
+    background-image: url('./../../assets/grain.png');
+    background-position: 0px 0px;
+    background-size: 300px 300px;
     height: 100vh;
     width: 40px;
     z-index: 9;
@@ -29,6 +32,7 @@
   &::after {
     background-color: $blue;
     transition: all 0.3s ease;
+    background-image: none;
   }
   .reverse {
     color: $blue;
@@ -52,6 +56,7 @@
   &::after {
     background-color: $yellow;
     transition: all 0.3s ease;
+    background-image: none;
   }
   .reverse {
     color: $yellow;
@@ -205,7 +210,7 @@ h1 {
   .frontend {
     position: absolute;
     top: -3rem;
-    right: 12rem;
+    right: 18rem;
     cursor: pointer;
   }
   .description {
@@ -249,4 +254,9 @@ h1 {
 .footer {
   margin-top: 30px;
   margin-left: 400px;
+}
+.grain {
+  background-image: url('./../../assets/grain.png');
+  background-position: 0px 0px;
+  background-size: 300px 300px;
 }

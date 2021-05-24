@@ -150,8 +150,8 @@ export const CodeAnime = () => (
               x="0"
               y="0"
               width="40"
-              height="20"
-              rx="10"
+              height="10"
+              rx="5"
             ></rect>
             <rect
               id="dash-2"
@@ -159,8 +159,8 @@ export const CodeAnime = () => (
               x="45"
               y="0"
               width="60"
-              height="20"
-              rx="10"
+              height="10"
+              rx="5"
             ></rect>
             <rect
               id="dash-3"
@@ -168,8 +168,8 @@ export const CodeAnime = () => (
               x="111"
               y="0"
               width="100"
-              height="20"
-              rx="10"
+              height="10"
+              rx="5"
             ></rect>
             <rect
               id="dash-4"
@@ -177,8 +177,8 @@ export const CodeAnime = () => (
               x="216"
               y="0"
               width="70"
-              height="20"
-              rx="10"
+              height="10"
+              rx="5"
             ></rect>
           </g>
           <g id="line2" transform="translate(30.000000, 27.000000)">
@@ -188,8 +188,8 @@ export const CodeAnime = () => (
               x="0"
               y="0"
               width="40"
-              height="20"
-              rx="10"
+              height="10"
+              rx="5"
             ></rect>
             <rect
               id="dash-2"
@@ -197,8 +197,8 @@ export const CodeAnime = () => (
               x="45"
               y="0"
               width="60"
-              height="20"
-              rx="10"
+              height="10"
+              rx="5"
             ></rect>
             <rect
               id="dash-3"
@@ -206,8 +206,8 @@ export const CodeAnime = () => (
               x="111"
               y="0"
               width="80"
-              height="20"
-              rx="10"
+              height="10"
+              rx="5"
             ></rect>
           </g>
           <rect
@@ -216,8 +216,8 @@ export const CodeAnime = () => (
             x="0"
             y="135"
             width="40"
-            height="20"
-            rx="10"
+            height="10"
+            rx="5"
           ></rect>
           <rect
             id="line3"
@@ -225,8 +225,8 @@ export const CodeAnime = () => (
             x="60"
             y="54"
             width="290"
-            height="20"
-            rx="10"
+            height="10"
+            rx="5"
           ></rect>
           <rect
             id="line4"
@@ -234,8 +234,8 @@ export const CodeAnime = () => (
             x="60"
             y="81"
             width="225"
-            height="20"
-            rx="10"
+            height="10"
+            rx="5"
           ></rect>
           <rect
             id="line5"
@@ -243,8 +243,8 @@ export const CodeAnime = () => (
             x="30"
             y="108"
             width="40"
-            height="20"
-            rx="10"
+            height="10"
+            rx="5"
           ></rect>
         </g>
       </g>

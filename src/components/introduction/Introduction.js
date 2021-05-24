@@ -25,7 +25,7 @@ const Introduction = () => {
           ? 'uxuiColor introContainer'
           : currentTheme === 'frontend'
           ? 'frontendColor introContainer'
-          : 'introContainer'
+          : 'introContainer grain'
       }
     >
       <div className="intro">

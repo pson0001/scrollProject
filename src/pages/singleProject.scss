@@ -1,12 +1,23 @@
-.singleProjecImg {
-  height: 50vh;
+@import './../styles/variables.scss';
+
+.singleProjecContainer {
+  height: 200vh;
+
   position: relative;
+  background: $background;
+
   .singleProjecBox {
     height: 100%;
     width: 100%;
     overflow: hidden;
     img {
       width: 100%;
+      object-fit: cover;
     }
   }
+}
+.grain {
+  background-image: url('./../assets/grain.png');
+  background-position: 0px 0px;
+  background-size: 300px 300px;
 }

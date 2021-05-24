@@ -1,6 +1,8 @@
 import React, { useContext } from 'react'
 import './project.scss'
 import { CurrentTheme } from './../ThemeWrapper'
+import { ImgPosition } from './../ImgWrapper'
+
 import { Link } from 'react-router-dom'
 import { motion } from 'framer-motion'
 // import { ArrowRight } from '../../assets/Icon.js'
@@ -11,14 +13,15 @@ const transition = { duration: 0.6, ease: [0.43, 0.13, 0.23, 0.96] }
 
 const Project = () => {
   const { currentTheme, setCurrentTheme } = useContext(CurrentTheme)
+  const { setPosition } = useContext(ImgPosition)
   return (
     <div
       className={
         currentTheme === 'uxui'
-          ? 'uxui projects'
+          ? 'uxui projects grain'
           : currentTheme === 'frontend'
-          ? 'frontend projects'
-          : 'projects'
+          ? 'frontend projects grain'
+          : 'projects grain'
       }
     >
       <div className="projectContainer">
@@ -33,11 +36,16 @@ const Project = () => {
                 <ProgressiveImage src={peerView}>
                   {(src) => (
                     <motion.img
-                      whileHover={{ scale: 1.05 }}
+                      whileHover={{ scale: 1 }}
                       transition={transition}
                       src={src}
                       alt="peerView"
-                      // className="image"
+                      onClick={(e) => {
+                        setPosition({
+                          x: e.target.getBoundingClientRect().x,
+                          y: e.target.getBoundingClientRect().y,
+                        })
+                      }}
                     />
                   )}
                 </ProgressiveImage>

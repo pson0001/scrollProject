@@ -15,7 +15,8 @@ const Home = () => {
         direction: 'horizontal',
       })
     }
-  })
+  }, [])
+
   return (
     <div className="scroll" ref={scrollRef} data-scroll-container>
       <div className="contentContainer">
