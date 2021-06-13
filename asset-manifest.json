@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/scrollProject/static/css/main.f7dc72e7.chunk.css",
-    "main.js": "/scrollProject/static/js/main.dbb8c3d2.chunk.js",
-    "main.js.map": "/scrollProject/static/js/main.dbb8c3d2.chunk.js.map",
+    "main.js": "/scrollProject/static/js/main.7f47e95f.chunk.js",
+    "main.js.map": "/scrollProject/static/js/main.7f47e95f.chunk.js.map",
     "runtime-main.js": "/scrollProject/static/js/runtime-main.8eadf8f9.js",
     "runtime-main.js.map": "/scrollProject/static/js/runtime-main.8eadf8f9.js.map",
     "static/js/2.f95daaf4.chunk.js": "/scrollProject/static/js/2.f95daaf4.chunk.js",
@@ -25,6 +25,6 @@
     "static/js/runtime-main.8eadf8f9.js",
     "static/js/2.f95daaf4.chunk.js",
     "static/css/main.f7dc72e7.chunk.css",
-    "static/js/main.dbb8c3d2.chunk.js"
+    "static/js/main.7f47e95f.chunk.js"
   ]
 }
