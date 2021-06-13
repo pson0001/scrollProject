@@ -17,7 +17,7 @@ function App() {
   gsap.to('body', 0, { css: { visibility: 'visible' } })
   const imageDetails = {
     width: 600,
-    height: 350,
+    height: 400,
   }
   const ImgContext = React.createContext()
   return (
@@ -27,7 +27,7 @@ function App() {
         <Router>
           <Route
             render={({ location }) => (
-              <AnimatePresence exitBeforeEnter>
+              <AnimatePresence initial={false} exitBeforeEnter>
                 <Switch location={location} key={location.pathname}>
                   <Route
                     exact

@@ -36,7 +36,6 @@ const Project = () => {
                 <ProgressiveImage src={peerView}>
                   {(src) => (
                     <motion.img
-                      whileHover={{ scale: 1 }}
                       transition={transition}
                       src={src}
                       alt="peerView"

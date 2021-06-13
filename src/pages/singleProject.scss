@@ -1,11 +1,55 @@
 @import './../styles/variables.scss';
 
 .singleProjecContainer {
-  height: 200vh;
+  height: calc(50vh + 60vw);
 
   position: relative;
   background: $background;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  .projectIntroduction {
+    overflow: hidden;
+    position: absolute;
+    top: calc(20vh);
+    display: flex;
+    flex-direction: row;
 
+    width: 70vw;
+    .projectName {
+      width: 40%;
+      overflow: hidden;
+      .name {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 30px;
+        .up {
+          font-size: 1rem;
+          color: $up;
+          margin-bottom: 5px;
+        }
+        .down {
+          color: $font;
+        }
+        .secondTitle {
+          font-size: 1.3rem;
+          font-weight: 700;
+        }
+      }
+    }
+    .projectDescription {
+      width: 60%;
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+    }
+    .paragraph {
+      font-size: 1rem;
+      color: $font;
+      margin-bottom: 20px;
+    }
+  }
   .singleProjecBox {
     height: 100%;
     width: 100%;
@@ -13,9 +57,74 @@
     img {
       width: 100%;
       object-fit: cover;
+      border-radius: 4px;
     }
   }
 }
+.projectContent {
+  color: $font;
+  background: $background;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  .detailedSection {
+    width: 70vw;
+    border-bottom: 1px solid $font;
+    padding-bottom: 30px;
+    margin-bottom: 30px;
+    .sectionTitleContainer {
+      display: flex;
+      flex-direction: column;
+      .sectionTitle {
+        font-size: 2rem;
+        font-weight: 700;
+        margin-bottom: 30px;
+      }
+      .sectionDescription {
+        margin-bottom: 30px;
+      }
+      img {
+        width: 100%;
+        border-radius: 4px;
+      }
+    }
+    .sectionContentContainer {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      .sectionContentItem {
+        display: flex;
+        flex-direction: column;
+        width: 45%;
+        &.sectionContentItemFull {
+          margin-top: 40px;
+          width: 100%;
+        }
+        > span {
+          margin-bottom: 10px;
+          &.itemTitle {
+            font-weight: 700;
+          }
+        }
+      }
+      img {
+        width: 100%;
+        border-radius: 4px;
+      }
+      .icon {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: $iconBackground;
+        height: 65px;
+        width: 65px;
+        border-radius: 99px;
+        margin-bottom: 10px;
+      }
+    }
+  }
+}
+
 .grain {
   background-image: url('./../assets/grain.png');
   background-position: 0px 0px;

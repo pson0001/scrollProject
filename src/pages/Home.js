@@ -1,4 +1,4 @@
-import React, { useRef, useEffect, useContext } from 'react'
+import React, { useRef, useEffect, useContext, useCallback } from 'react'
 import locomotiveScroll from 'locomotive-scroll'
 import Project from '../components/project/Project'
 import Introduction from '../components/introduction/Introduction'
@@ -15,6 +15,9 @@ const Home = () => {
         direction: 'horizontal',
       })
     }
+    // return () => {
+    //   scrollRef.current = null
+    // }
   }, [])
 
   return (
