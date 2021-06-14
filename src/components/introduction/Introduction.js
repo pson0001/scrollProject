@@ -16,7 +16,7 @@ const Introduction = () => {
     } else {
       setCurrentTheme('default')
     }
-  }, [ifHoverUxui, ifHoverFrontend])
+  }, [ifHoverUxui, ifHoverFrontend, setCurrentTheme])
 
   return (
     <div

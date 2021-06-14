@@ -62,6 +62,7 @@
   }
 }
 .projectContent {
+  // min-height: 500vh;
   color: $font;
   background: $background;
   display: flex;
@@ -101,6 +102,10 @@
           margin-top: 40px;
           width: 100%;
         }
+        &.sectionContentItemFullSingle {
+          margin-top: 0px;
+          width: 100%;
+        }
         > span {
           margin-bottom: 10px;
           &.itemTitle {
@@ -120,7 +125,7 @@
         height: 65px;
         width: 65px;
         border-radius: 99px;
-        margin-bottom: 10px;
+        margin-bottom: 15px;
       }
     }
   }

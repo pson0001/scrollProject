@@ -1,4 +1,4 @@
-import React, { useContext } from 'react'
+import React from 'react'
 // import locomotiveScroll from 'locomotive-scroll'
 
 import gsap from 'gsap'
@@ -19,21 +19,18 @@ function App() {
     width: 600,
     height: 400,
   }
-  const ImgContext = React.createContext()
+
   return (
-    <ImgWrapper>
-      <ThemeWrapper>
-        <Navigation />
-        <Router>
+    <Router>
+      <ImgWrapper>
+        <ThemeWrapper>
+          <Navigation />
+
           <Route
             render={({ location }) => (
               <AnimatePresence initial={false} exitBeforeEnter>
                 <Switch location={location} key={location.pathname}>
-                  <Route
-                    exact
-                    path="/"
-                    render={() => <Home imageDetails={imageDetails} />}
-                  />
+                  <Route exact path="/" component={Home}></Route>
                   <Route
                     exact
                     path="/project/:id"
@@ -43,9 +40,9 @@ function App() {
               </AnimatePresence>
             )}
           />
-        </Router>
-      </ThemeWrapper>
-    </ImgWrapper>
+        </ThemeWrapper>
+      </ImgWrapper>
+    </Router>
   )
 }
 

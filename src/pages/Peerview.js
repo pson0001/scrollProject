@@ -30,13 +30,15 @@ const Peerview = ({ imageDetails }) => {
   const { position } = useContext(ImgPosition)
   const projectScrollRef = useRef(null)
   useEffect(() => {
-    if (projectScrollRef) {
-      new locomotiveScroll({
-        el: projectScrollRef.current,
-        smooth: true,
-        direction: 'vertical',
-      })
-    }
+    setTimeout(() => {
+      if (projectScrollRef) {
+        new locomotiveScroll({
+          el: projectScrollRef.current,
+          smooth: true,
+          direction: 'vertical',
+        })
+      }
+    }, 1000)
   }, [])
 
   const projectNameText = {
@@ -178,7 +180,7 @@ const Peerview = ({ imageDetails }) => {
             <span className="sectionTitle">My Process</span>
 
             <div>
-              <img src={myprocess}></img>
+              <img src={myprocess} alt="myprocess"></img>
             </div>
           </div>
         </div>
@@ -259,7 +261,7 @@ const Peerview = ({ imageDetails }) => {
                 every page
               </span>
               <div>
-                <img src={sitemap}></img>
+                <img src={sitemap} alt="sitemap"></img>
               </div>
             </div>
             <div className="sectionContentItem">
@@ -272,7 +274,7 @@ const Peerview = ({ imageDetails }) => {
                 features
               </span>
               <div>
-                <img src={userflow}></img>
+                <img src={userflow} alt="userflow"></img>
               </div>
             </div>
           </div>
@@ -283,11 +285,11 @@ const Peerview = ({ imageDetails }) => {
               </div>
               <span className="itemTitle">Wireframe</span>
               <span>
-                The review process is entirely paper-based. It is hard to
-                process the review and keep historical data.
+                There are two critical features that I illustrated with high
+                level wireframe.
               </span>
               <div>
-                <img src={wireframe}></img>
+                <img src={wireframe} alt="wireframe"></img>
               </div>
             </div>
           </div>
@@ -302,7 +304,25 @@ const Peerview = ({ imageDetails }) => {
                 the application
               </span>
               <div>
-                <img src={ui}></img>
+                <img src={ui} alt="ui"></img>
+              </div>
+            </div>
+          </div>
+        </div>
+        {/* Build */}
+        <div className="detailedSection">
+          <div className="sectionTitleContainer">
+            <span className="sectionTitle">Build</span>
+            <div className="sectionContentContainer">
+              <div className="sectionContentItem sectionContentItemFullSingle">
+                <div className="icon">
+                  <Color></Color>
+                </div>
+                <span className="itemTitle">Design Review with Developers</span>
+                <span>
+                  I conducted frequent design review sessions with developers to
+                  ensure that the interactions and features perform as expected.
+                </span>
               </div>
             </div>
           </div>
@@ -318,7 +338,7 @@ const Peerview = ({ imageDetails }) => {
               implementation.
             </span>
             <div>
-              <img src={dls}></img>
+              <img src={dls} alt="dls"></img>
             </div>
           </div>
         </div>

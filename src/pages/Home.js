@@ -1,4 +1,4 @@
-import React, { useRef, useEffect, useContext, useCallback } from 'react'
+import React, { useRef, useEffect } from 'react'
 import locomotiveScroll from 'locomotive-scroll'
 import Project from '../components/project/Project'
 import Introduction from '../components/introduction/Introduction'
@@ -16,12 +16,12 @@ const Home = () => {
       })
     }
     // return () => {
-    //   scrollRef.current = null
+    //   scrollRef.destroy()
     // }
   }, [])
 
   return (
-    <div className="scroll" ref={scrollRef} data-scroll-container>
+    <div className="scroll" ref={scrollRef} id="homeScroll" data-scroll-section>
       <div className="contentContainer">
         <Introduction />
         <Project />
